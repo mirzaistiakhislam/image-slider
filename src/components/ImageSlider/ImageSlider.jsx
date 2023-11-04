@@ -13,7 +13,7 @@ const images = [
     },
     {
         id: 2,
-        imageUrl: 'https://www.movieposters.com/cdn/shop/files/ItemR80569_jpg_480x.progressive.jpg?v=1682446550',
+        imageUrl: 'https://www.movieposters.com/cdn/shop/products/akira.2020.imax_480x.progressive.jpg?v=1597332258',
         content: 'HOWEVER, WHEN',
     },
     {
@@ -58,7 +58,7 @@ export default function App() {
             setCurrentImageIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
-        }, 3000); // Change the image every 3 seconds
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [images.length]);
@@ -66,7 +66,7 @@ export default function App() {
     const renderImage = (index) => {
         const image = images[index];
         return (
-            <div key={image.id} className="">
+            <div key={image.id}>
                 <img
                     src={image.imageUrl}
                     alt={`Slide ${image.id}`}
