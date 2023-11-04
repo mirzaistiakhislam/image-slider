@@ -68,16 +68,13 @@ body {
 .wrapper {
     display: flex;
     justify-content: center;
-
-    border: 1px solid red;
 }
 
 .scene {
-    width: 500px;
+    width: 350px;
     height: 300px;
     perspective: 1000px;
     position: relative;
-    border: 1px solid red;
 }
 
 .scene .carousel.keen-slider {
@@ -92,9 +89,6 @@ body {
 .carousel__cell {
     position: absolute;
     width: 300px;
-    left: 2%;
     height: 250px;
-    /* border: 1px solid rgba(0, 0, 0, 0.3); */
-
-    border: 1px solid red;
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }

@@ -75,15 +75,15 @@ export default function App() {
                 <img
                     src={image.imageUrl}
                     alt={`Slide ${image.id}`}
-                    className="w-full"
+                    className="w-full object-cover rounded-lg"
                 />
             </div>
         );
     };
 
     return (
-        <div className="flex items-center justify-center w-3/4 h-screen border">
-            <div className="wrapper">
+        <div className="md:flex items-center justify-center w-full h-2/3">
+            <div className="wrapper w-1/2">
                 <div className="scene">
                     <div className="carousel keen-slider" ref={sliderRef}>
                         <div className="carousel__cell number-slide1">
@@ -98,17 +98,17 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            <div className="w-full p-8 text-white border">
-                <h2 className="text-xl font-semibold">COMING SOON</h2>
+            <div className="p-8 text-white w-1/2">
+                <h2 className="text-lg font-semibold mb-1">COMING SOON</h2>
                 <h1 className='text-2xl font-semibold mb-4'>{images[currentImageIndex].content}</h1>
-                <div className='flex justify-between border py-4'>
+                <div className='flex justify-between border-y text-gray-300 py-2'>
                     <p className='my-2'><span className='text-sm'>2019 - Movie - 2h 10m</span></p>
                     <div className='flex items-center'>
                         <img src={logo} className='h-5 w-12' alt="" /> <span className='ml-2 text-sm'>7.4</span>
                     </div>
                 </div>
-                <div className='mt-4'>
-                    <p className='text-xs'>Recent buzz suggests that Yash Raj Films has already planned a bumper Diwali surprise, which is called Kabir! Yes, you read that right. If the buzz is true, then Tiger 3...<span className='text-[#F6C800] font-semibold'>Read More</span> </p>
+                <div className='my-4 '>
+                    <p className='text-xs '>Recent buzz suggests that Yash Raj Films has already planned a bumper Diwali surprise, which is called Kabir! Yes, you read that right. If the buzz is true, then Tiger 3...<span className='text-[#F6C800] font-semibold'>Read More</span> </p>
                 </div>
                 <button className="px-3 py-2 btn-warning my-4 rounded flex items-center text-white"> <FaPlay className='mr-2 font-bold' size={22} /><span className='text-sm '> Watch Now</span></button>
             </div>
