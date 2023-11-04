@@ -20,11 +20,6 @@ const images = [
         id: 3,
         imageUrl: 'https://www.movieposters.com/cdn/shop/files/scan009_ac831d52-2425-498c-b1cc-92fa19670c76_480x.progressive.jpg?v=1687292020',
         content: 'THEN SHE WENT BACK',
-    },
-    {
-        id: 4,
-        imageUrl: 'https://www.movieposters.com/cdn/shop/files/scan_c16314a7-8bed-4d61-9ef2-bc6bbcff90f2_480x.progressive.jpg?v=1687292228',
-        content: 'HALF-PAST ONE',
     }
 ];
 
@@ -75,15 +70,15 @@ export default function App() {
                 <img
                     src={image.imageUrl}
                     alt={`Slide ${image.id}`}
-                    className="w-full object-fit rounded-lg"
+                    className="md:object-fit rounded-lg"
                 />
             </div>
         );
     };
 
     return (
-        <div className="flex items-center justify-center w-full h-2/3">
-            <div className="wrapper w-1/2">
+        <div className="md:flex items-center justify-center md:w-full md:h-2/3 mobile-res">
+            <div className="wrapper md:w-1/2">
                 <div className="scene">
                     <div className="carousel keen-slider" ref={sliderRef}>
                         <div className="carousel__cell number-slide1">
@@ -98,7 +93,7 @@ export default function App() {
                     </div>
                 </div>
             </div>
-            <div className="p-8 text-white w-1/2">
+            <div className="p-6 text-white md:w-1/2 md:mr-10">
                 <h2 className="text-lg font-semibold mb-1">COMING SOON</h2>
                 <h1 className='text-2xl font-semibold mb-4'>{images[currentImageIndex].content}</h1>
                 <div className='flex justify-between border-y text-gray-300 py-2'>

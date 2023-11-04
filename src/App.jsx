@@ -3,7 +3,7 @@ import ImageSlider from './components/ImageSlider/ImageSlider';
 function App() {
 
   return (
-    <div className="flex justify-center items-center h-screen bg-zinc-900">
+    <div className="md:flex justify-center items-center md:h-screen">
       <ImageSlider />
     </div>
   )
