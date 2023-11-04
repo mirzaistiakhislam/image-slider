@@ -14,9 +14,10 @@ body {
     font-size: 50px;
     color: #fff;
     font-weight: 500;
-    height: 200px;
+    /* height: 200px; */
+    /* width: 100%; */
     max-height: 100vh;
-
+    /* border: 1px solid red; */
 }
 
 /* .number-slide1 {
@@ -68,13 +69,15 @@ body {
 .wrapper {
     display: flex;
     justify-content: center;
+    /* border: 1px solid red; */
 }
 
 .scene {
-    width: 350px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     perspective: 1000px;
     position: relative;
+    border: 1px solid red;
 }
 
 .scene .carousel.keen-slider {
@@ -84,11 +87,13 @@ body {
     overflow: visible;
     transform: translateZ(-288px);
     transform-style: preserve-3d;
+    /* border: 1px solid red; */
 }
 
 .carousel__cell {
     position: absolute;
     width: 300px;
     height: 250px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    /* border: 1px solid red; */
 }

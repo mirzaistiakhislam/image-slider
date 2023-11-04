@@ -8,22 +8,22 @@ import { FaPlay } from "react-icons/fa6";
 const images = [
     {
         id: 1,
-        imageUrl: 'https://i.ibb.co/mt2PG8N/image-11.jpg',
+        imageUrl: 'https://www.movieposters.com/cdn/shop/products/2d980ab744ac2b98bec26af9ab98e697_1aebb70a-0afe-48bd-9b0f-63ab8d4cfee6_480x.progressive.jpg?v=1573585463',
         content: 'LET ME SEE--HOW',
     },
     {
         id: 2,
-        imageUrl: 'https://i.ibb.co/RDf7G28/image-10.jpg',
+        imageUrl: 'https://www.movieposters.com/cdn/shop/files/ItemR80569_jpg_480x.progressive.jpg?v=1682446550',
         content: 'HOWEVER, WHEN',
     },
     {
         id: 3,
-        imageUrl: 'https://i.ibb.co/QFM28Vj/image-9.webp',
+        imageUrl: 'https://www.movieposters.com/cdn/shop/files/scan009_ac831d52-2425-498c-b1cc-92fa19670c76_480x.progressive.jpg?v=1687292020',
         content: 'THEN SHE WENT BACK',
     },
     {
         id: 4,
-        imageUrl: 'https://i.ibb.co/QFM28Vj/image-9.webp',
+        imageUrl: 'https://www.movieposters.com/cdn/shop/files/scan_c16314a7-8bed-4d61-9ef2-bc6bbcff90f2_480x.progressive.jpg?v=1687292228',
         content: 'HALF-PAST ONE',
     }
 ];
@@ -75,14 +75,14 @@ export default function App() {
                 <img
                     src={image.imageUrl}
                     alt={`Slide ${image.id}`}
-                    className="w-full object-cover rounded-lg"
+                    className="w-full object-fit rounded-lg"
                 />
             </div>
         );
     };
 
     return (
-        <div className="md:flex items-center justify-center w-full h-2/3">
+        <div className="flex items-center justify-center w-full h-2/3">
             <div className="wrapper w-1/2">
                 <div className="scene">
                     <div className="carousel keen-slider" ref={sliderRef}>
