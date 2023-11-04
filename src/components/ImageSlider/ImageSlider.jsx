@@ -1,25 +1,30 @@
 import { useState, useEffect } from 'react';
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
-import "./App.css"
-import logo from './assets/logo.png';
-
+import "./ImageSlider.css";
+import logo from '../../assets/logo.png';
+import { FaPlay } from "react-icons/fa6";
 
 const images = [
     {
         id: 1,
         imageUrl: 'https://i.ibb.co/mt2PG8N/image-11.jpg',
-        content: 'However, When',
+        content: 'LET ME SEE--HOW',
     },
     {
         id: 2,
         imageUrl: 'https://i.ibb.co/RDf7G28/image-10.jpg',
-        content: 'Then She Went Back.',
+        content: 'HOWEVER, WHEN',
     },
     {
         id: 3,
         imageUrl: 'https://i.ibb.co/QFM28Vj/image-9.webp',
-        content: 'Half Past One',
+        content: 'THEN SHE WENT BACK',
+    },
+    {
+        id: 4,
+        imageUrl: 'https://i.ibb.co/QFM28Vj/image-9.webp',
+        content: 'HALF-PAST ONE',
     }
 ];
 
@@ -77,31 +82,35 @@ export default function App() {
     };
 
     return (
-        <div className='flex justify-center items-center h-screen bg-gray-100'>
-            <div className="flex items-center justify-center h-screen border">
-                <div className="wrapper">
-                    <div className="scene">
-                        <div className="carousel keen-slider" ref={sliderRef}>
-                            <div className="carousel__cell number-slide1">
-                                <div className="">{renderImage(currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1)}</div>
-                            </div>
-                            <div className="carousel__cell number-slide2">
-                                <div className="">{renderImage(currentImageIndex)}</div>
-                            </div>
-                            <div className="carousel__cell number-slide3">
-                                <div className="">{renderImage((currentImageIndex + 1) % images.length)}</div>
-                            </div>
+        <div className="flex items-center justify-center w-3/4 h-screen border">
+            <div className="wrapper">
+                <div className="scene">
+                    <div className="carousel keen-slider" ref={sliderRef}>
+                        <div className="carousel__cell number-slide1">
+                            <div className="">{renderImage(currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1)}</div>
+                        </div>
+                        <div className="carousel__cell number-slide2">
+                            <div className="">{renderImage(currentImageIndex)}</div>
+                        </div>
+                        <div className="carousel__cell number-slide3">
+                            <div className="">{renderImage((currentImageIndex + 1) % images.length)}</div>
                         </div>
                     </div>
                 </div>
-                <div className="w-full p-8">
-                    <h2 className="text-2xl font-bold mb-4">Comming Soon</h2>
-                    <p>{images[currentImageIndex].content}</p>
-                    <div className='flex'>
-                        <h2>2019 - Movie - 2h 10m</h2>
-                        <img src={logo} className='h-8 w-12' alt="" /> 7.4
+            </div>
+            <div className="w-full p-8 text-white border">
+                <h2 className="text-xl font-semibold">COMING SOON</h2>
+                <h1 className='text-2xl font-semibold mb-4'>{images[currentImageIndex].content}</h1>
+                <div className='flex justify-between border py-4'>
+                    <p className='my-2'><span className='text-sm'>2019 - Movie - 2h 10m</span></p>
+                    <div className='flex items-center'>
+                        <img src={logo} className='h-5 w-12' alt="" /> <span className='ml-2 text-sm'>7.4</span>
                     </div>
                 </div>
+                <div className='mt-4'>
+                    <p className='text-xs'>Recent buzz suggests that Yash Raj Films has already planned a bumper Diwali surprise, which is called Kabir! Yes, you read that right. If the buzz is true, then Tiger 3...<span className='text-[#F6C800] font-semibold'>Read More</span> </p>
+                </div>
+                <button className="px-3 py-2 btn-warning my-4 rounded flex items-center text-white"> <FaPlay className='mr-2 font-bold' size={22} /><span className='text-sm '> Watch Now</span></button>
             </div>
         </div>
     )
